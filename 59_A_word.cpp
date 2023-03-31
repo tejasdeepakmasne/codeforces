@@ -39,6 +39,11 @@ void convert_lower(char a[]) {
 }
 
 int main() {
+
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout)
+    #endif
     
     scanf("%s",&word);
     int upper{0};
