@@ -3,6 +3,9 @@ using namespace std;
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+cin.tie(0);
+cout.tie(0);
 
     int num_students;
     int turns;
@@ -18,8 +21,10 @@ int main()
     while(turns !=0) {
         for(i=1;i < num_students; i++) {
             if(queue[i]==71 && queue[i-1]==66) {
-                queue[i] = 66;
-                queue[i-1] = 71;
+               char temp;
+               temp = queue[i];
+               queue[i] = queue[i-1];
+               queue[i-1] = temp;
                 break;
                 
             }
