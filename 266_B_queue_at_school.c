@@ -3,7 +3,7 @@
 int main() {
     long int number;
     long int turns;
-    long int counter = 0;
+    
     scanf("%ld %ld",&number,&turns);
 
     char queue[number];
@@ -11,14 +11,14 @@ int main() {
 
     while(turns > 0) {
         for(int i=1; i < number; i++) {
-            if(queue[i] == 'G' && queue[i-1] == 'B' && counter != 1) {
+            if(queue[i] == 'G' && queue[i-1] == 'B') {
                 queue[i] = 'B';
                 queue[i-1] = 'G';
-                counter++;
+                i = i + 1;
             }
         }
-        counter = 0;
         turns--;
+        
     }
 
     printf("%s",queue);
